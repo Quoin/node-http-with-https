@@ -1,0 +1,4 @@
+/.npmignore
+/example
+/quoin-node-http-with-https-*.tgz
+/server.js

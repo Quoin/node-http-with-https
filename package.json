@@ -1,0 +1,35 @@
+{
+  "name": "@quoin/node-http-with-https",
+  "version": "1.0.0",
+  "description": "Simple nodejs server with HTTP that redirects to HTTPS",
+  "main": "index.js",
+  "engine": {
+    "node": ">=6.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quoin/node-http-with-https.git"
+  },
+  "keywords": [
+    "HTTP",
+    "HTTPS",
+    "redirect"
+  ],
+  "author": {
+    "name": "Hữu Ðà Trần",
+    "email": "huuda.tran@quoininc.com",
+    "url": "https://www.quoininc.com/staff/huu-da-tran/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Quoin/node-http-with-https/issues"
+  },
+  "homepage": "https://github.com/Quoin/node-http-with-https#readme",
+  "devDependencies": {
+    "debug": "3.x.x",
+    "express": "4.x.x"
+  }
+}
