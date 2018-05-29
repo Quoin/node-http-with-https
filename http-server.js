@@ -1,16 +1,5 @@
 const http = require('http');
 
-const requestHandler = (httpsPort) => (req, res) => {
-    // FIXME: If on AWS, security group will forward to other port.
-    const redirectHttpsPort = (httpsPort === 443)
-        ? ''
-        : `:${httpsPort}`
-    ;
+const requestHandler = require('./http-server-request-handler');
 
-    const hostname = req.headers.host.split(':', 1).pop();
-    const location = `https://${hostname}${redirectHttpsPort}${req.url}`;
-    res.writeHead(308, { location });
-    res.end();
-};
-
-module.exports = (httpsPort) => http.createServer(requestHandler(httpsPort));
+module.exports = (httpsPort, behindProxy) => http.createServer(requestHandler(httpsPort, behindProxy));

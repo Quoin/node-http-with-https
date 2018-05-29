@@ -12,6 +12,6 @@ const httpsOptions = {
 };
 const app = require('./example/app');
 
-const { httpServer, httpsServer } = httpWithHttps(8443, httpsOptions, app);
+const { httpServer, httpsServer } = httpWithHttps(8443, false, httpsOptions, app);
 httpServer.listen(httpPort, () => debug(`HTTP on ${httpPort}.`));
 httpsServer.listen(httpsPort, () => debug(`HTTPS on ${httpsPort}.`));

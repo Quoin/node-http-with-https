@@ -6,6 +6,7 @@ This library offers a very simple code to force HTTP traffic to go in HTTPS.
 
     const httpWithHttps = require('@quoin/node-http-with-https');
 
+    const behindProxy = false;
     const httpPort = 8080;
     const httpsPort = 8443;
     const httpsOptions = {
@@ -16,14 +17,17 @@ This library offers a very simple code to force HTTP traffic to go in HTTPS.
     };
     const app = express(); // This is your expressJS app.
 
-    const { httpServer, httpsServer } = httpWithHttps(httpsPort, httpsOptions, app);
+    const { httpServer, httpsServer } = httpWithHttps(httpsPort, behindProxy, httpsOptions, app);
 
     httpServer.listen(httpPort, () => console.log(`HTTP on ${httpPort}.`));
+
     httpsServer.listen(httpsPort, () => console.log(`HTTPS on ${httpsPort}.`));
 
 where:
 
 - `httpsPort`: port that will be used to run the application on HTTPS.
+- `behindProxy`: Indicates if the server runs behind a proxy. This will prevent
+  `httpsPort` to be appended to the hostname.
 - `httpsOptions`: HTTPS options to be passed to `https.createServer()`.
 - `app`: the expressJS app to run.
 
