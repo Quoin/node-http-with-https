@@ -1,5 +1,7 @@
 # @quoin/node-http-with-https
 
+[![Build Status](https://travis-ci.com/Quoin/node-http-with-https.svg?branch=master)][https://travis-ci.com/Quoin/node-http-with-https)
+
 This library offers a very simple code to force HTTP traffic to go in HTTPS.
 
 ## Usage
