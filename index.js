@@ -1,5 +1,5 @@
-const httpServer = require('./http-server');
-const httpsServer = require('./https-server');
+const httpServer = require('./lib/http-server');
+const httpsServer = require('./lib/https-server');
 
 module.exports = (httpsPort, behindProxy, httpsOptions, httpsApp) => {
     const returnValue = {

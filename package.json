@@ -7,7 +7,14 @@
     "node": ">=6.9.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run -s lint && npm test",
+    "lint:node": "eslint --fix --ignore-pattern=\"*.test.js\" lib index.js",
+    "lint:test": "eslint --fix --config=.eslintrc.test.json \"lib/**/*.test.js\" index.*.test.js",
+    "lint": "npm run -s lint:node && npm run -s lint:test",
+    "test:unit": "mocha \"*.unit.test.js\" \"lib/**/*.unit.test.js\"",
+    "test": "npm run -s test:unit",
+    "coverage:unit": "nyc --report-dir=reports/coverage/unit npm run -s test:unit",
+    "coverage": "npm run -s coverage:unit"
   },
   "repository": {
     "type": "git",
@@ -29,7 +36,18 @@
   },
   "homepage": "https://github.com/Quoin/node-http-with-https#readme",
   "devDependencies": {
+    "@quoin/eslint-config-quoin": "latest",
+    "@quoin/node-test-helpers": "latest",
     "debug": "3.x.x",
-    "express": "4.x.x"
+    "eslint": "4.19.x",
+    "eslint-plugin-html": "4.0.x",
+    "eslint-plugin-import": "2.12.x",
+    "eslint-plugin-json": "1.2.x",
+    "eslint-plugin-node": "6.0.x",
+    "eslint-plugin-promise": "3.8.x",
+    "eslint-plugin-standard": "3.1.x",
+    "express": "4.x.x",
+    "mocha": "5.2.x",
+    "nyc": "11.8.x"
   }
 }
