@@ -2,6 +2,5 @@
 
 The certificate where generated using the following commands:
 
-    openssl genrsa -out example.key 2048
-    openssl req -new -x509 -key example.key -out example.cert -days 3650 -subj '/C=US/ST=Massachusetts/L=Boston/O=Quoin Inc/CN=Quoin Inc'
+    openssl req -config localhost.conf -new -x509 -sha256 -newkey rsa:2048 -nodes -keyout localhost.key.pem -out localhost.cert.pem -days 365
 

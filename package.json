@@ -39,7 +39,6 @@
   "devDependencies": {
     "@quoin/eslint-config-quoin": "latest",
     "@quoin/node-test-helpers": "latest",
-    "debug": "3.x.x",
     "eslint": "4.19.x",
     "eslint-plugin-html": "4.0.x",
     "eslint-plugin-import": "2.12.x",
