@@ -7,7 +7,8 @@
     "node": ">=6.9.0"
   },
   "scripts": {
-    "prepublish": "npm run -s lint && npm test",
+    "prepare": "npm run -s lint",
+    "prepack": "npm test",
     "lint:node": "eslint --fix --ignore-pattern=\"*.test.js\" lib index.js",
     "lint:test": "eslint --fix --config=.eslintrc.test.json \"lib/**/*.test.js\" index.*.test.js",
     "lint": "npm run -s lint:node && npm run -s lint:test",

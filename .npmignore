@@ -1,4 +1,9 @@
+/.eslintrc*
 /.npmignore
+/.nyc*
+/.travis*
+/**/*.test.js
 /example
 /quoin-node-http-with-https-*.tgz
+/reports
 /server.js

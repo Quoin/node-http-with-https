@@ -6,6 +6,7 @@ This library offers a very simple code to force HTTP traffic to go in HTTPS.
 
 ## Usage
 
+    const fs = require('fs');
     const httpWithHttps = require('@quoin/node-http-with-https');
 
     const behindProxy = false;
