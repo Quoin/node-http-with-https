@@ -1,13 +1,15 @@
 {
   "name": "@quoin/node-http-with-https",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple nodejs server with HTTP that redirects to HTTPS",
   "main": "index.js",
   "engine": {
     "node": ">=8.12.0"
   },
   "scripts": {
-    "prepack": "npm run coverage",
+    "check": "npm run lint && npm run jscpd",
+    "prepack": "npm run check && npm run coverage",
+    "jscpd": "jscpd lib *.js",
     "lint:node": "eslint --fix --ignore-pattern=\"*.test.js\" lib index.js",
     "lint:test": "eslint --fix --config=.eslintrc.test.json \"lib/**/*.test.js\" index.*.test.js",
     "lint": "npm run lint:node",
@@ -38,17 +40,22 @@
   },
   "homepage": "https://github.com/Quoin/node-http-with-https#readme",
   "devDependencies": {
-    "@quoin/eslint-config-quoin": "~0.3.0",
+    "@quoin/eslint-config-quoin": "~0.3.2",
     "@quoin/node-test-helpers": "~1.0.3",
-    "eslint": "~5.16.0",
-    "eslint-plugin-html": "~5.0.3",
-    "eslint-plugin-import": "~2.16.0",
-    "eslint-plugin-json": "~1.4.0",
-    "eslint-plugin-node": "~8.0.1",
-    "eslint-plugin-promise": "~4.1.1",
-    "eslint-plugin-standard": "~4.0.0",
-    "express": "~4.16.4",
-    "mocha": "~6.1.2",
-    "nyc": "~13.3.0"
+    "eslint": "~6.6.0",
+    "eslint-config-standard": "~14.1.0",
+    "eslint-plugin-html": "~6.0.0",
+    "eslint-plugin-import": "~2.18.2",
+    "eslint-plugin-json": "~2.0.1",
+    "eslint-plugin-node": "~10.0.0",
+    "eslint-plugin-promise": "~4.2.1",
+    "eslint-plugin-standard": "~4.0.1",
+    "express": "~4.17.1",
+    "jscpd": "~2.0.16",
+    "mocha": "~6.2.2",
+    "nyc": "~14.1.1"
+  },
+  "peerDependencies": {
+    "express": ">=4.17.0"
   }
 }

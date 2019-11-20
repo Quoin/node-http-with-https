@@ -1,6 +1,7 @@
 /.eslintrc*
+/.jscpd.json
 /.npmignore
-/.nyc*
+/.nycrc
 /.travis*
 /**/*.test.js
 /example
