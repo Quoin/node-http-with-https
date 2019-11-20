@@ -7,3 +7,7 @@
 ## 1.0.1 - 2019-04-10
 
 - Updating node version and npm outdated.
+
+## 1.0.0 - 2018-09-24
+
+- Initial release.
