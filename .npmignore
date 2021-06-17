@@ -1,4 +1,5 @@
 /.eslintrc*
+/.github
 /.jscpd.json
 /.npmignore
 /.nycrc
