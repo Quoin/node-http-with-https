@@ -1,5 +1,9 @@
 # node-http-with-https Release Notes
 
+## 2.0.0 - 2021-06-18
+
+- Avoid `-rc.*`.
+
 ## 2.0.0-rc.1 - 2021-06-17
 
 - Updating packages and node@14
