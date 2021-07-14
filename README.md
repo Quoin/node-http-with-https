@@ -60,3 +60,12 @@ warning because the certificate is self-signed.
 
 See [example/README.md](example/README.md) to see how the self-signed
 certificate files were generated.
+
+
+## LetsEncrypt
+
+This server will have a minimum support for letsencrypt. It will allow the
+validation of the acme-challenge in HTTP before redirecting to HTTPS. In order
+to do that, it must define the environment variable:
+
+    ACME_CHALLENGE=/some/path/that/is/used/by/certbot

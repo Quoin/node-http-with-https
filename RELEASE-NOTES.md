@@ -1,5 +1,9 @@
 # node-http-with-https Release Notes
 
+## 2.0.2 - 2021-07-14
+
+- Adding basic support for certbot acme-challenge in HTTP.
+
 ## 2.0.1 - 2021-06-21
 
 - Merging into master branch and latest tag.
